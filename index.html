@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <script src="script.js"></script>
+    <main>
+      <section id="formSection">
+        <form id="taskForm">
+          <div class="input-group">
+            <label for="taskName">Enter Task Name</label>
+            <input id="taskName" name="taskName" type="text" required />
+          </div>
+          <div class="input-group">
+            <label for="taskDate">Enter Task Deadline</label>
+            <input
+              id="taskDate"
+              name="taskDate"
+              type="datetime-local"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <label for="taskPriority" name="taskPriority"
+              >Enter Task Priority</label
+            >
+            <select id="taskPriority" name="taskPriority" required>
+              <option>High</option>
+              <option>Medium</option>
+              <option>Low</option>
+            </select>
+          </div>
+          <button id="addBtn" type="submit">Add Task</button>
+        </form>
+      </section>
+      <section id="taskSection">
+        <label for="taskFilter">Filter By:</label>
+        <select id="taskFilter">
+          <option>All</option>
+          <option>Active</option>
+          <option>Completed</option>
+        </select>
+      </section>
+    </main>
+    <footer>Created By SP3141, 2026</footer>
+  </body>
+</html>
