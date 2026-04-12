@@ -3,7 +3,7 @@
 :root {
   --primary: hsl(270, 100%, 17%);
   --secondary: hsla(270, 75%, 30%, 0.75);
-  --accent: hsla(120, 50%, 50%, 0.75);
+  --accent: hsla(120, 100%, 50%, 0.75);
   --dark: #222;
   --light: #ebebeb;
   --space-sm: 4px;
@@ -87,6 +87,18 @@ footer {
   width: 50%;
   aspect-ratio: 4/1;
   background: var(--accent);
+  transition: all 0.2s ease-out;
+}
+
+#addBtn:hover {
+  transform: translateY(-25%);
+  box-shadow: 0 0 16px var(--accent);
+}
+
+#addBtn:active {
+  background: #008236;
+  transform: translateY(0);
+  box-shadow: none;
 }
 
 #filterLabel {
