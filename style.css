@@ -1,16 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 :root {
-  --primary: #5000a0;
-  --secondary: #e6e600;
-  --dark: #3b3b3b;
-  --light: #dedede;
+  --primary: hsl(270, 100%, 17%);
+  --secondary: hsla(270, 75%, 30%, 0.75);
+  --accent: hsla(120, 50%, 50%, 0.75);
+  --dark: #222;
+  --light: #ebebeb;
   --space-sm: 4px;
   --space-md: 8px;
-  --space-slg: 24px;
+  --space-lg: 32px;
   --text-sm: 14px;
   --text-md: 18px;
   --text-lg: 32px;
+  font-family: "Inter";
 }
 
 * {
@@ -25,6 +27,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: linear-gradient(var(--primary), var(--dark));
 }
 
 main {
@@ -32,34 +35,64 @@ main {
   height: 40vh;
   min-height: 500px;
   display: flex;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-lg);
+  color: var(--light);
 }
 
 .input-group {
   display: flex;
   flex-direction: column;
-  margin-bottom: 1rem;
-}
-#formSection {
-  border: 1px solid black;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
+  margin-bottom: var(--space-lg);
+  gap: var(--space-md);
+  border: 2px solid var(--secondary);
+  border-radius: 8px;
+  text-align: center;
+  background: var(--primary);
 }
 
+#formSection,
 #taskSection {
-  border: 1px solid black;
+  background: var(--secondary);
+  align-items: center;
+}
+
+#formSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+#taskSection {
+  text-align: center;
   flex: 1;
   display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 footer {
-  background: linear-gradient(var(--light), var(--dark));
+  background: linear-gradient(120deg, var(--light), var(--dark));
   position: fixed;
   bottom: 0;
   width: 100vw;
-  height: 100px;
+  height: 8vh;
   font-family: "Inter";
-  color: white;
   text-align: center;
   align-content: center;
+}
+
+#addBtn {
+  border: none;
+  width: 50%;
+  aspect-ratio: 4/1;
+  background: var(--accent);
+}
+
+#filterLabel {
+  grid-area: 1/1/1/2;
+}
+
+#taskFilter {
+  grid-area: 1/3/1/4;
 }
