@@ -5,6 +5,12 @@
   --secondary: #e6e600;
   --dark: #3b3b3b;
   --light: #dedede;
+  --space-sm: 4px;
+  --space-md: 8px;
+  --space-slg: 24px;
+  --text-sm: 14px;
+  --text-md: 18px;
+  --text-lg: 32px;
 }
 
 * {
